@@ -29,7 +29,9 @@ public abstract class GraphIterator implements Iterator<Node>{
     
     public Node next()
     {
-        return toVisite.
+
+        return null;
+
     }
     
     

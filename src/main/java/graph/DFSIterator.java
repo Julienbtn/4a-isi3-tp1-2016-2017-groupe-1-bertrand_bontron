@@ -11,7 +11,7 @@ import java.util.Iterator;
 public class DFSIterator extends GraphIterator {
 
     
-    public Object next() {
+    public Node next() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
