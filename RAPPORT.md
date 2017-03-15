@@ -1,6 +1,6 @@
-**Nom/Prénom Etudiant 1 :**
+**Bertrand/Axel:**
 
-**Nom/Prénom Etudiant 2 :**
+**Bontron/Julien:**
 
 # Rapport TP1
 
@@ -8,7 +8,7 @@
 *Expliquer le code ajouté*
 
 ## Question 2
-*Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
+*Pattern Adapteur*
 
 ## Question 3
 *Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
