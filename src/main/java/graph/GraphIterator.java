@@ -29,7 +29,7 @@ public abstract class GraphIterator implements Iterator<Node>{
     
     public Node next()
     {
-        
+        return null;
     }
     
     
