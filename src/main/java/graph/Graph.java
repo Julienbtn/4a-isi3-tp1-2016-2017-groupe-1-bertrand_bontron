@@ -40,18 +40,26 @@ public class Graph implements IDirectedGraph {
 		adjacence.put(_node, new ArrayList<Arc>());
 
 	}
-	
+	/**
+         * @param _edge
+         * ajoute un arc dans le graphe
+         */
 	public void addArc(Arc _edge){
 	
 		if (!hasArc(_edge.getSource(),_edge.getDestination()))
 			adjacence.get(_edge.getSource()).add(_edge);
 	
 	}
-	
+	/**
+         * @return la collection de tous les noeuds présents dans le graphe 
+         */
 	public Set<Node> getAllNodes(){
 		return this.adjacence.keySet();
 	}
 	
+        /**
+         * @return le nombre de noeuds du graphe 
+         */
 	public int getNbNodes(){
 		return this.adjacence.size();
 	}
@@ -75,7 +83,9 @@ public class Graph implements IDirectedGraph {
 	}
 	
 	
-
+        /**
+         * renvoie un string contenant tout le graphe  
+         */
 	@Override
 	public String toString() {
             StringBuilder builder  = new StringBuilder("Graph");
@@ -90,7 +100,6 @@ public class Graph implements IDirectedGraph {
                 }
                 builder.append(']');
             }
-
             return builder.toString();
 	}
 
