@@ -36,6 +36,10 @@ public class Graph implements IDirectedGraph {
 		return false;
 	}
 	
+        /**
+         * @param _node
+         * ajoute le noeud passé en paramètre
+         */
 	public void addNode(Node _node){
 		adjacence.put(_node, new ArrayList<Arc>());
 
@@ -65,7 +69,6 @@ public class Graph implements IDirectedGraph {
 	}
 	
 	/**
-	 * 
 	 * @param _n
 	 * @return tous les arcs de source _n
 	 */
