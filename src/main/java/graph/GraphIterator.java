@@ -5,31 +5,43 @@
  */
 package graph;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
-import java.util.Stack;
 
 
 public abstract class GraphIterator implements Iterator<Node>{
     
-    private Set<Node> visited;
-    private List<Node> toVisite;
+    protected Set<Node> visited;
+    protected ICourse<Node> toVisite;
+    protected IGraph graph;
     
     
-    public void GraphIterator(IGraph graph, Node node)
+    public GraphIterator(IGraph graph, Node node)
     {
-        this.visited = new HashSet<Node>();
-        this.toVisite = new ArrayList<Node>();
+        this.graph = graph;
+        this.visited = new HashSet<>();
     }
     
+    @Override
+    public boolean hasNext()
+    {
+        return !toVisite.isEmpty();
+    }
     
-    
+    @Override
     public Node next()
     {
-        return null;
+        Node res = toVisite.remove();
+        visited.add(res);
+        graph
+            .getAdjNodes(res)
+            .stream()
+            .filter((n) -> (!visited.contains(n)))
+            .forEach((n) -> {
+                toVisite.add(n);
+            });
+        return res;
     }
     
     

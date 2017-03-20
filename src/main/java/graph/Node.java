@@ -7,9 +7,9 @@ package graph;
  */
 
 public class Node {
-	/**
-	 * etiquette du noeud
-	 */
+    /**
+     * etiquette du noeud
+     */
     private Label label;
     /**
      * ID unique du noeud
@@ -48,28 +48,26 @@ public class Node {
 
     
     
-	@Override
-	public String toString() {
-		return ""+label;
-	}
+    @Override
+    public String toString() {
+            return "" + label;
+    }
 
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Node other = (Node) obj;
-		if (uniqueID != other.uniqueID)
-			return false;
-		return true;
-	}
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+                return true;
+        if (obj == null)
+                return false;
+        if (getClass() != obj.getClass())
+                return false;
+        Node other = (Node) obj;
+        if (uniqueID != other.uniqueID)
+                return false;
+        return true;
+    }
 
-    
-   
 }
 
 

@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package graph;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -14,7 +10,7 @@ public class UndirectedGraph implements IUndirectedGraph {
     private Graph graph;
     
     
-    public void UndirectedGraph()
+    public UndirectedGraph()
     {
         this.graph = new Graph();
     }
@@ -43,6 +39,16 @@ public class UndirectedGraph implements IUndirectedGraph {
 
     public List<Node> getAdjNodes(Node _n) {
         return graph.getAdjNodes(_n);
+    }
+
+    @Override
+    public Iterator<Node> creerBFSIterator(Node n) {
+        return graph.creerBFSIterator(n);
+    }
+
+    @Override
+    public Iterator<Node> creerDFSIterator(Node n) {
+        return graph.creerDFSIterator(n);
     }
     
 }
