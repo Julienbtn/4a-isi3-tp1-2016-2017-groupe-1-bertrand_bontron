@@ -22,7 +22,7 @@ les noeuds on retourne la variable au format string ce qui nous donne le résult
 
 ## Question 2
 Afin de réutiliser le maximun de code nous utilsons un Pattern Adapteur comme vous pouvez l'observer sur l'image suivante
-![Question 2](images/Question2.png)
+![Question 2](images/Question2.PNG)
 
 ## Question 3
 Expliquer le code ajouté et insérer un schéma du patron de conception mis en place
