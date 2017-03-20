@@ -1,3 +1,5 @@
+package graph;
+
 import graph.Arc;
 import graph.DoubleLabel;
 import graph.Graph;

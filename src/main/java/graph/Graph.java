@@ -93,7 +93,7 @@ public class Graph implements IDirectedGraph {
 	public String toString() {
             StringBuilder builder  = new StringBuilder("Graph");
             for(Entry entry : adjacence.entrySet()){
-                builder.append("\n[")
+                builder.append("\n[noeud=")
                         .append(entry.getKey())
                         .append(" : ");
                 for(Arc arc: ((List<Arc>)entry.getValue())){
