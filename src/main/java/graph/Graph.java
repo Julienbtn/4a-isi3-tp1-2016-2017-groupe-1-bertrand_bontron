@@ -17,13 +17,13 @@ public class Graph implements IDirectedGraph {
     /**
      * A chaque cle=noeud est associe la liste des arcs sortants de ce noeud
      */
-    private final Map<Node,List<Arc>> adjacence; 
+    private final Map<Node,List<Arc>> adjacence;
 
     public Graph(){
         adjacence = new HashMap<>();
     }
     /**
-     * 
+     *
      * @param _n1
      * @param _n2
      * @return vrai si graph possede arc de src _n1 et destination _n2
@@ -40,7 +40,7 @@ public class Graph implements IDirectedGraph {
 
     /**
      * @param _node
-     * ajoute le noeud passé en paramètre
+     * ajoute le noeud passï¿½ en paramï¿½tre
      */
     @Override
     public void addNode(Node _node){
@@ -59,7 +59,7 @@ public class Graph implements IDirectedGraph {
 
     }
     /**
-     * @return la collection de tous les noeuds présents dans le graphe 
+     * @return la collection de tous les noeuds prï¿½sents dans le graphe
      */
     @Override
     public Set<Node> getAllNodes(){
@@ -67,7 +67,7 @@ public class Graph implements IDirectedGraph {
     }
 
     /**
-     * @return le nombre de noeuds du graphe 
+     * @return le nombre de noeuds du graphe
      */
     @Override
     public int getNbNodes(){
@@ -96,7 +96,7 @@ public class Graph implements IDirectedGraph {
 
 
     /**
-     * @return un string contenant tout le graphe  
+     * @return un string contenant tout le graphe
      */
     @Override
     public String toString() {
