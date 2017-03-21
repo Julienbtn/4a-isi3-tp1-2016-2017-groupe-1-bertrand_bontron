@@ -25,7 +25,8 @@ Afin de réutiliser le maximun de code nous utilsons un Pattern Adapter comme vo
 
 ## Question 3 et 4
 Afin de garder notre logique de réutilisation maximale du code nous avons déjà implémenté, en plus du pattern iterator nous avons également réutilsé le pattern 
-adapter avec les classes QueueCourse (pour le parcours en largeur) et StackCourse (pour le parcours en profondeur) qui implémentent l'interfaceICourse.
+adapter avec les classes QueueCourse adaptant une queue pour le parcours en largeur et StackCourse, adaptant un stack pour le parcours en profondeur 
+qui implémentent l'interface ICourse.
 Vous pouvez observer le schéma UML sur l'image suivante.
 ![Question 3](images/Question3.PNG)
 
