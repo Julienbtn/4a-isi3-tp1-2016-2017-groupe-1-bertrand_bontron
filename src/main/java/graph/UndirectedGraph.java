@@ -16,39 +16,45 @@ public class UndirectedGraph implements IUndirectedGraph {
     }
     
 
+    @Override
     public void addEdge(Node _node1, Node _node2) {
         graph.addArc(new Arc(_node1, _node2, null));
         graph.addArc(new Arc(_node2, _node1, null));
     }
 
+    @Override
     public boolean hasEdge(Node _node1, Node _node2) {
         return graph.hasArc(_node1, _node2);
     }
 
-    public void addNode(Node _node) {
-        graph.addNode(_node);
+    @Override
+    public void addNode(Node node) {
+        graph.addNode(node);
     }
 
+    @Override
     public Set<Node> getAllNodes() {
         return graph.getAllNodes();
     }
 
+    @Override
     public int getNbNodes() {
         return graph.getNbNodes();
     }
 
-    public List<Node> getAdjNodes(Node _n) {
-        return graph.getAdjNodes(_n);
+    @Override
+    public List<Node> getAdjNodes(Node node) {
+        return graph.getAdjNodes(node);
     }
 
     @Override
-    public Iterator<Node> creerBFSIterator(Node n) {
-        return graph.creerBFSIterator(n);
+    public Iterator<Node> creerBFSIterator(Node node) {
+        return graph.creerBFSIterator(node);
     }
 
     @Override
-    public Iterator<Node> creerDFSIterator(Node n) {
-        return graph.creerDFSIterator(n);
+    public Iterator<Node> creerDFSIterator(Node node) {
+        return graph.creerDFSIterator(node);
     }
     
 }

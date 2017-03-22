@@ -1,4 +1,4 @@
-package graph;
+package graph.iterator;
 
 import java.util.Stack;
 
@@ -13,8 +13,10 @@ public class StackCourse<E> implements ICourse{
     
     
     @Override
-    public boolean add(Object e) {
-        stack.push((E) e);
+    public boolean add(Object node) {
+        if (stack.contains((E) node))
+            stack.remove((E) node);
+        stack.push((E) node);
         return true;
     }
 

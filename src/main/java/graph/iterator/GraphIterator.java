@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package graph;
+package graph.iterator;
 
+import graph.IGraph;
+import graph.Node;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -17,31 +19,28 @@ public abstract class GraphIterator implements Iterator<Node>{
     protected IGraph graph;
     
     
-    public GraphIterator(IGraph graph, Node node)
-    {
+    public GraphIterator(IGraph graph, Node node) {
         this.graph = graph;
         this.visited = new HashSet<>();
     }
     
     @Override
-    public boolean hasNext()
-    {
+    public boolean hasNext() {
         return !toVisite.isEmpty();
     }
     
     @Override
-    public Node next()
-    {
-        Node res = toVisite.remove();
-        visited.add(res);
+    public Node next() {
+        Node next = toVisite.remove();
+        visited.add(next);
         graph
-            .getAdjNodes(res)
+            .getAdjNodes(next)
             .stream()
             .filter((n) -> (!visited.contains(n)))
             .forEach((n) -> {
                 toVisite.add(n);
             });
-        return res;
+        return next;
     }
     
     

@@ -1,5 +1,7 @@
 package graph;
 
+import graph.iterator.DFSIterator;
+import graph.iterator.BFSIterator;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
